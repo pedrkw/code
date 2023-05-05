@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situação Acadêmica</title>
+    <style>
+        .borda {
+            border: 1px solid black;
+        }
+
+        .borda td {
+            border: 1px solid black;
+        }
+
+        .borda th {
+            border: 1px solid black;
+            background-color: #689ad9;
+        }
+
+        .aprovado {
+            background-color: #9ACD32
+        }
+
+        .reprovado {
+            background-color: #FF4500
+        }
+    </style>
+</head>
+
+<body>
+    <table class="borda">
+        <thead>
+            <tr>
+                <td colspan=8 align="center">
+                    <h2>Situação Acadêmica</h2>
+                </td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th>Nome do aluno</th>
+                <th>Disciplina</th>
+                <th colspan="2">Avaliação Parcial 1 e 2</th>
+                <!-- <th>Avaliação Parcial 2</th> -->
+                <th>Média</th>
+                <th>Total de aulas</th>
+                <th>% de faltas</th>
+                <th>Situação Final</th>
+            </tr>
+            <tr>
+                <td rowspan="2" align="center">João</td>
+                <td>Programação para WEB</td>
+                <td align="center">8.5</td>
+                <td align="center">7.0</td>
+                <td align="center">7.75</td>
+                <td align="center" rowspan="2">20</td>
+                <td align="center">10%</td>
+                <td align="center" class="aprovado">Aprovado</td>
+            </tr>
+            <tr>
+                <td>Big Data</td>
+                <td align="center">9.0</td>
+                <td align="center">7.5</td>
+                <td align="center">8.25</td>
+                <!-- <td align="center">20</td> -->
+                <td align="center">5%</td>
+                <td align="center" class="aprovado">Aprovado</td>
+            </tr>
+            <tr>
+                <td rowspan="2" align="center">Maria</td>
+                <td>Programação para WEB</td>
+                <td align="center">6.0</td>
+                <td align="center">5.0</td>
+                <td align="center">5.5</td>
+                <td align="center" rowspan="2">20</td>
+                <td align="center">15%</td>
+                <td align="center" class="reprovado">Reprovado por média</td>
+            </tr>
+            <tr>
+                <td>Big Data</td>
+                <td align="center">7.5</td>
+                <td align="center">6.0</td>
+                <td align="center">6.75</td>
+                <!-- <td align="center">20</td> -->
+                <td align="center">20%</td>
+                <td align="center" class="reprovado">Reprovado por faltas</td>
+            </tr>
+            <tr>
+                <td rowspan="2" align="center">Lucas</td>
+                <td>Programação para WEB</td>
+                <td align="center">8.0</td>
+                <td align="center">8.5</td>
+                <td align="center">8.25</td>
+                <td align="center" rowspan="2">20</td>
+                <td align="center">0%</td>
+                <td align="center" class="aprovado">Aprovado</td>
+            </tr>
+            <tr>
+                <td>Big Data</td>
+                <td align="center">7.0</td>
+                <td align="center">6.5</td>
+                <td align="center">6.75</td>
+                <!-- <td align="center">20</td> -->
+                <td align="center">15%</td>
+                <td align="center" class="reprovado">Reprovado por média</td>
+            </tr>
+            <tr>
+                <td rowspan="2" align="center">Isabella</td>
+                <td>Programação para WEB</td>
+                <td align="center">8.0</td>
+                <td align="center">9.0</td>
+                <td align="center">8.5</td>
+                <td align="center" rowspan="2">20</td>
+                <td align="center">0%</td>
+                <td align="center" class="aprovado">Aprovado</td>
+            </tr>
+            <tr>
+                <td>Big Data</td>
+                <td align="center">7.5</td>
+                <td align="center">8.0</td>
+                <td align="center">7.75</td>
+                <!-- <td align="center">20</td> -->
+                <td align="center">5%</td>
+                <td align="center" class="aprovado">Aprovado</td>
+            </tr>
+            <tr>
+                <td rowspan="2" align="center">Gustavo</td>
+                <td>Programação para WEB</td>
+                <td align="center">9.0</td>
+                <td align="center">8.5</td>
+                <td align="center">8.75</td>
+                <td align="center" rowspan="2">20</td>
+                <td align="center">5%</td>
+                <td align="center" class="aprovado">Aprovado</td>
+            </tr>
+            <tr>
+                <td>Big Data</td>
+                <td align="center">8.0</td>
+                <td align="center">7.5</td>
+                <td align="center">7.75</td>
+                <!-- <td align="center">20</td> -->
+                <td align="center">5%</td>
+                <td align="center" class="aprovado">Aprovado</td>
+            </tr>
+            <tr>
+                <td rowspan="2" align="center">Thiago</td>
+                <td>Programação para WEB</td>
+                <td align="center">7.5</td>
+                <td align="center">8.0</td>
+                <td align="center">7.75</td>
+                <td align="center" rowspan="2">20</td>
+                <td align="center">10%</td>
+                <td align="center" class="aprovado">Aprovado</td>
+            </tr>
+            <tr>
+                <td>Big Data</td>
+                <td align="center">7.0</td>
+                <td align="center">7.0</td>
+                <td align="center">7.0</td>
+                <!-- <td align="center">20</td> -->
+                <td align="center">15%</td>
+                <td align="center" class="reprovado">Reprovado por média</td>
+            </tr>
+            <tr>
+                <td rowspan="2" align="center">Larissa</td>
+                <td>Programação para WEB</td>
+                <td align="center">8.5</td>
+                <td align="center">9.0</td>
+                <td align="center">8.75</td>
+                <td align="center" rowspan="2">20</td>
+                <td align="center">0%</td>
+                <td align="center" class="aprovado">Aprovado</td>
+            </tr>
+            <tr>
+                <td>Big Data</td>
+                <td align="center">8.5</td>
+                <td align="center">9.0</td>
+                <td align="center">8.75</td>
+                <!-- <td align="center">20</td> -->
+                <td align="center">0%</td>
+                <td align="center" class="aprovado">Aprovado</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan=8 align="center">
+                    <h2>Dados referente ao período 2023.1</h2>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

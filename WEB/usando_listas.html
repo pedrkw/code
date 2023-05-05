@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Pedro Jorge">
+    <meta name="description" content="A estrutura base de uma página HTML">
+    <meta name="keywords" content="html, tecnologia, web">
+    <title>Lista aninhadas e de definição</title>
+    <style>
+        li ul {
+            /* display: none */
+            height: 0;
+            overflow: scroll;
+            transition: height .4s;
+        }
+
+        li:hover {
+            background: #2e2e2e;
+        }
+
+        li:hover ul {
+            /* display: block; */
+            height: 50px;
+        }
+
+        body {
+            background-color: #141414;
+            color: #f0f8ff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lista Aninhadas e de Definição!</h1>
+    <!-- Lista aninhada -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2
+            <ul>
+                <li>Item 2.1</li>
+                <li>Item 2.2</li>
+                <li>Item 2.3</li>
+                <li>Item 2.4</li>
+                <li>Item 2.5</li>
+            </ul>
+        </li>
+        <li>Item 3</li>
+    </ul>
+
+    <hr>
+    <!-- Lista de definição -->
+    <dl>
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação de Hipertexto!</dd>
+
+        <dt>CSS</dt>
+        <dd>Linguagem para criação de folhas de estilo!</dd>
+    </dl>
+
+    <hr>
+
+    <dl>
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programação WEB!</dd>
+        <dd>Linguagem interpretada estruturada, de script em alto nível.</dd>
+    </dl>
+
+    <hr>
+
+    <dl>
+        <dt>WWW</dt>
+        <dt>Internet</dt>
+        <dd>Rede mundial de computadores.</dd>
+    </dl>
+
+</body>
+
+</html>

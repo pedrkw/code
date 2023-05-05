@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Pedro Jorge">
+    <meta name="description" content="A estrutura base de uma página HTML">
+    <meta name="keywords" content="html, tecnologia, web">
+    <title>Uso da propriedade Overflow</title>
+    <style>
+        h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: medium;
+            text-align: center;
+        }
+
+        div {
+            padding: 2%;
+            margin: 120px 2%;
+            border: 1px solid salmon;
+            width: 20%;
+            height: 100px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* display: inline-block; */
+            float: left;
+        }
+
+        .div1 {
+            overflow: visible;
+        }
+
+        .div2 {
+            overflow: hidden;
+        }
+
+        .div3 {
+            overflow: scroll;
+        }
+
+        .div4 {
+            overflow: aut;
+        }
+
+        body {
+            background-color: #141414;
+            color: #f0f8ff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Usando a propriedade Overflow.</h1>
+
+    <div class="div1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio totam numquam reiciendis necessitatibus eligendi
+        explicabo vero vitae quidem, reprehenderit consequatur odio nam, ad fugiat, voluptatum id animi tenetur
+        quibusdam quo.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit odit doloremque porro quod dolor assumenda
+        corporis alias magni recusandae quos cupiditate officiis voluptas quaerat modi rerum illum, minus vitae ex.
+    </div>
+
+    <div class="div2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis inventore magni iste distinctio natus, aut
+        cumque, sed culpa assumenda odit a. Quibusdam, minus! Distinctio, velit ipsum? Beatae itaque velit tempora.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore nulla doloremque vitae facilis quidem, dicta
+        nisi cupiditate, quibusdam excepturi quasi ab eligendi quae hic corrupti recusandae quaerat aliquid temporibus
+        beatae?
+    </div>
+
+    <div class="div3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+
+    <div class="div4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+</body>
+
+</html>
