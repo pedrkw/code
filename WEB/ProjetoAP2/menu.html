@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menu Moodle-style</title>
+  <style>
+    .menu {
+      position: relative;
+      display: inline-block;
+      padding: 10px;
+      background-color: #F5F5F5;
+      border-radius: 4px;
+    }
+
+    .menu-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      min-width: 180px;
+      border-radius: 4px;
+      z-index: 1;
+    }
+
+    .menu:hover .menu-content {
+      display: block;
+    }
+
+    .menu-item {
+      padding: 8px 10px;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .menu-item:hover {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <span>&#9776;</span>
+    <div class="menu-content">
+      <div class="menu-item">Perfil</div>
+      <div class="menu-item">Sair</div>
+    </div>
+  </div>
+</body>
+</html>
