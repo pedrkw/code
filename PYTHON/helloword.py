@@ -1,2 +1,1 @@
-hello = "Hello, word!"
-print(hello)
+print("Hello, word!")
