@@ -1,3 +1,10 @@
 {
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "editor.language.colorizedBracketPairs": [
+        ["[", "]"],
+        ["(", ")"],
+        ["{", "}"],
+        ["<", "</"],
+        ["<", "/>"]
+    ],
 }
