@@ -12,3 +12,8 @@ console.log(podeDirigir);  // true
 var solBrilha = true;
 var estaChovendo = !solBrilha;
 console.log(estaChovendo);  // false
+
+const a1 = true;
+const b1 = false;
+
+console.log(a1 && b1); // false
