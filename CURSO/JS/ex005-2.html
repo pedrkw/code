@@ -8,7 +8,7 @@
     <style>
         body {
             background-color: #181818;
-            color:aliceblue;
+            color: aliceblue;
             font: normal 18px Arial;
         }
     </style>
@@ -17,9 +17,33 @@
 <body>
     <h1>Primeiros passos com DOM</h1>
     <p>Aprendendo a usar o <b>DOM</b></p>
-    <div>Clique em mim</div>
+    <p>Lorem ipsum dolor sit, <strong>amet consectetur</strong> adipisicing elit.</p>
+    <div id="msg">Clique em mim</div>
+    <div name="msg1">Clique em mim2</div>
+    <div class="msg2">Clique em mim3</div>
+    <div class="msg3">Clique em mim4</div>
     <script>
-
+        let p1 = window.document.getElementsByTagName("p")[0];
+        let pp1 = window.document.getElementsByTagName("p")[1];
+        let corpo = window.document.body;
+        // let d = window.document.getElementById('msg');
+        let name = window.document.getElementsByName('msg1')[0];
+        let classname = window.document.getElementsByClassName('msg2')[0];
+        let ql = window.document.querySelector('div#msg3');
+        // let querysel = window.document.querySelector('div.msg2')
+        // window.document.write(window.navigator.appName);
+        // window.document.write(window.document.URL);
+        // p1.style.color = 'green';
+        // window.document.write('Está escrito assim: ' + p1.innerText);
+        // document.write("\n")
+        // window.document.write(pp1.innerHTML);
+        // alert(pp1.innerHTML)
+        // d.style.background = 'orange';
+        // d.innerText = 'Carregando...';
+        // document.getElementById('msg').innerText = 'Alterado';
+        // name.innerText = 'Olá!';
+        // classname.innerText = 'Usando getElementsByClassName';
+        // ql.style.background = 'orange';
     </script>
 </body>
 
