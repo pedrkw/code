@@ -20,4 +20,3 @@ if(imc <= 16.9) {
 } else {
     console.log("Obesidade grau III.");
 }
-

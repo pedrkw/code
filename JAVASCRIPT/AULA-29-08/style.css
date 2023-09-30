@@ -1,0 +1,60 @@
+* {
+    color: var(--fontColor);
+    font-family: verdana;
+}
+body {
+    font-family: monospace;
+    background: var(--bg);
+}
+
+ul {
+    font-family: consolas;
+}
+
+li {
+    list-style: circle;
+}
+
+.list {
+    list-style: square;
+}
+
+#p-msg {
+    font-family: Georgia;
+}
+
+:root {
+    --green: #00ff00;
+    --white: #f1f1f1;
+    --black: #101010;
+}
+
+.light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg:var(--white);
+    --btnFontColor:var(--black);
+}
+
+
+.btn {
+    /* border-width: 10px; */
+    position: absolute;
+    top: 30px;
+    left: 350px;
+    width: 60px;
+    height: 60px;
+    /* border: none; */
+    /* border-radius: 10px; */
+    border-radius: 50%;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+    cursor: pointer;
+}
