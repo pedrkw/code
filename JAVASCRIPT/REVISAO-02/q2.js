@@ -9,7 +9,7 @@ for (let i = 0; i < 3; i++) {
 function vetorSoma(x) {
   let valores = 0;
   for (i = 0; i < x.length; i++) {
-    valores = valores + x[i]
+    valores = valores + x[i];
   }
   console.log(`A soma dos valores é: ${valores}`);
 }
