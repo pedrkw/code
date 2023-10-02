@@ -2,8 +2,6 @@
 
 using namespace std;
 
-// Questão 1 de Matriz
-
 int main()
 {
     int linha, coluna, valor, posi_linha, posi_coluna, maior = 0;
