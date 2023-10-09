@@ -6,7 +6,7 @@ function numeroAleatorio(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-// Adiciona números inteiros aleatórios ao vetor
+// Adiciona x números inteiros aleatórios ao vetor
 for (let i = 0; i < 5; i++) {
   let numero = numeroAleatorio(1, 100);
   listaNum.push(numero);

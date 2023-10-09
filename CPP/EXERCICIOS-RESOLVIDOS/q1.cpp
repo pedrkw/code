@@ -1,3 +1,4 @@
+// Calcula o peso ideal com base na altura e sexo fornecidos pelo usuário.
 #include <iostream>
 
 using namespace std;
