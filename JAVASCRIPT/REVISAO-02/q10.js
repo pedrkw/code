@@ -9,7 +9,7 @@ function numeroAleatorio(min, max) {
 
 numero = numeroAleatorio(1, 100);
 
-console.log(numero);
+// console.log(numero);
 
 while(escolha != numero) {
   escolha = parseInt(prompt("Adivinhe um número entre 1 e 100: "))
