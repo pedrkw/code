@@ -9,7 +9,7 @@ function numeroAleatorio(min, max) {
 // Adiciona x números inteiros aleatórios ao vetor
 for (let i = 0; i < 5; i++) {
   let numero = numeroAleatorio(1, 100);
-  listaNum.push(numero);
+  // listaNum.push(numero);
 }
 
 for (var i = 0; i < listaNum.length; i++) {
