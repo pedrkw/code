@@ -9,15 +9,7 @@ if len(textInput) > 1:
     print("Digite apenas uma letra!")
     sys.exit()
 
-if textInput.upper() in [x.upper() for x in vowels]:
+if textInput.upper() in vowels:
     print("É uma vogal")
 else:
     print("É uma consoante")
-
-# while len(textInput) == 1:
-#     if textInput.upper() in [x.upper() for x in vowels]:
-#         print("É uma vogal")
-#         break
-#     else:
-#         print("É uma consoante")
-#         break
