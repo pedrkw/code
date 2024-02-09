@@ -1,6 +1,6 @@
 total, rato, sapo, coelho = 0, 0, 0, 0
 
-N = int(input("Quantos casos de testes serao digitados ? "))
+N = int(input("Quantos casos de testes serão digitados ? "))
 vet: [int] = [0 for x in range(N)]
 
 print("Coelho: C\nRato: R\nSapo: S")
