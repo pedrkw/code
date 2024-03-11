@@ -1,4 +1,4 @@
- # Faça um Programa que leia 4 notas, mostre as notas e a média na tela.
+# Faça um Programa que leia 4 notas, mostre as notas e a média na tela.
 grade_one = float(input("Digite a nota um: "))
 grade_two = float(input("Digite a nota dois: "))
 grade_three = float(input("Digite a nota três: "))
