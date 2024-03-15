@@ -3,9 +3,10 @@
 # e ‘N’, se seu argumento for zero ou negativo.
 def check_char(n):
     if n > 0:
-      return print("P")
+        return print("P")
     else:
-      return print("N")
+        return print("N")
+
 
 n = int(input("Digite um valor: "))
 check_char(n)

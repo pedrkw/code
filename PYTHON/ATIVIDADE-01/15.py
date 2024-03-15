@@ -8,7 +8,6 @@ growth_rate_b = float(input("Informe a taxa de crescimento anual do país B (em 
 
 count = 0
 
-# Validação para garantir que a população do país A seja menor que a do país B
 while country_a >= country_b:
     print("A população do país A deve ser menor que a do país B.")
     country_a = float(input("Informe novamente a população inicial do país A: "))

@@ -4,7 +4,6 @@
 # Salário: maior que zero;
 # Sexo: 'f' ou 'm';
 # Estado Civil: 's - solteiro(a)', 'c - casado(a)', 'v - viúvo(a)', 'd - divorciado(a)';
-
 def name_check():
     name = input("Nome: ")
     while len(name) <= 3:

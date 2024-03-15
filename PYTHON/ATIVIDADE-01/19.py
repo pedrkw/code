@@ -3,7 +3,6 @@ import random
 import string
 
 vowel_list = ['a', 'e', 'i', 'o', 'u']
-# char_list = ['a', 'g', 'e', 'n', 'm', 't', 'c', 'i', 'p', 'f']
 char_list = []
 for _ in range(10):
     char_list.append(random.choice(string.ascii_lowercase))

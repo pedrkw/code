@@ -3,18 +3,13 @@
 # uma taxa de crescimento de 1.5%. Faça um programa que calcule e escreva o número
 # de anos necessários para que a população do país A ultrapasse ou iguale a população
 # do país B, mantidas as taxas de crescimento.
-
 country_a = 80000
 country_b = 200000
 count = 0
 
-while not country_a >= country_b:
+while country_a <= country_b:
     count += 1
-    # country_a *= (1 + 0.03)
-    # country_a *= 1 + 3 / 100
     country_a *= 1.03
-    # country_b *= (1 + 0.015)
-    # country_b *= 1 + 1.5 / 100
     country_b *= 1.015
 
 print(f"O país A demorou {count} anos para chegar em {country_a:.0f} habitantes.")

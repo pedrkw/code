@@ -3,6 +3,6 @@ login = input("Digite um nome de usuário: ")
 password = input("Digite uma senha: ")
 
 while (password == login):
-		print("Usuário e senha iguais. Por favor, tente novamente.")
-		login = input("Digite um nome de usuário: ")
-		password = input("Digite uma senha: ")
+    print("Usuário e senha iguais. Por favor, tente novamente.")
+    login = input("Digite um nome de usuário: ")
+    password = input("Digite uma senha: ")
