@@ -26,9 +26,7 @@ void main(List<String> args) {
     print('Hora convertida: $resultado');
   }
 
-  bool continuar = false;
-
-  while (continuar == false) {
+  while (true) {
     stdout.write("Digite a hora: ");
     int inputHora = int.parse(stdin.readLineSync()!);
 
