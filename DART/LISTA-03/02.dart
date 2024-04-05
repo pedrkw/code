@@ -9,6 +9,7 @@
 // e o valor total de prestações pagas no dia. O cálculo do valor a ser pago é feito da
 // seguinte forma. Para pagamentos sem atraso, cobrar o valor da prestação. Quando
 // houver atraso, cobrar 3% de multa, mais 0,1% de juros por dia de atraso.
+
 import 'dart:io';
 
 void main(List<String> args) {

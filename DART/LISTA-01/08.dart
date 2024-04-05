@@ -1,27 +1,28 @@
 // Faça um programa que pergunte o preço de três produtos e informe qual produto você
 // deve comprar, sabendo que a decisão é sempre pelo mais barato.
-import 'dart:io' as io;
+
+import 'dart:io';
 
 void main(List<String> args) {
   print("Digite o nome do produto um: ");
-  String? inputNomeUm = io.stdin.readLineSync();
+  String? inputNomeUm = stdin.readLineSync();
 
   print("Digite o preço do produto um: ");
-  String? inputPrecoUm = io.stdin.readLineSync();
+  String? inputPrecoUm = stdin.readLineSync();
   double precoUm = double.parse(inputPrecoUm!);
 
   print("Digite o nome do produto dois: ");
-  String? inputNomeDois = io.stdin.readLineSync();
+  String? inputNomeDois = stdin.readLineSync();
 
   print("Digite o preço do produto dois: ");
-  String? inputPrecoDois = io.stdin.readLineSync();
+  String? inputPrecoDois = stdin.readLineSync();
   double precoDois = double.parse(inputPrecoDois!);
 
   print("Digite o nome do produto três: ");
-  String? inputNomeTres = io.stdin.readLineSync();
+  String? inputNomeTres = stdin.readLineSync();
 
   print("Digite o preço do produto três: ");
-  String? inputPrecoTres = io.stdin.readLineSync();
+  String? inputPrecoTres = stdin.readLineSync();
   double precoTres = double.parse(inputPrecoTres!);
   
   if (precoUm < precoDois && precoUm < precoTres) {
