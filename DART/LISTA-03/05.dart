@@ -9,7 +9,7 @@
 
 import 'dart:math';
 
-void main(List<String> args) {
+void main() {
   int dadoUm = 0;
   int dadoDois = 0;
   int contador = 1;
@@ -17,6 +17,7 @@ void main(List<String> args) {
   int somaDados = 0;
 
   while (true) {
+    print("Rodada: $contador");
     dadoUm = Random().nextInt(6) + 1;
     dadoDois = Random().nextInt(6) + 1;
     somaDados = dadoUm + dadoDois;
@@ -28,25 +29,33 @@ void main(List<String> args) {
       break;
     }
 
-    if (contador == 1 && (somaDados == 2 || somaDados == 3 || somaDados == 12)) {
+    if (contador == 1 &&
+        (somaDados == 2 || somaDados == 3 || somaDados == 12)) {
       print("Você perdeu!");
       break;
     }
 
-    if (contador == 1 && (somaDados == 4 || somaDados == 5 || somaDados == 6 || somaDados == 8 || somaDados == 9 || somaDados == 10)) {
+    if (contador == 1 &&
+        (somaDados == 4 ||
+            somaDados == 5 ||
+            somaDados == 6 ||
+            somaDados == 8 ||
+            somaDados == 9 ||
+            somaDados == 10)) {
       ponto = somaDados;
-      print("Parabéns, você marcou um ponto");
+      print("Parabéns, você marcou um ponto!");
     } else if (contador > 1 && (ponto == somaDados)) {
-      print("Parabéns, você marcou outro ponto!");
+      print("Parabéns! Você marcou mais um ponto e ganhou o jogo!");
       print("Fim de jogo.");
       break;
     } else if (somaDados == 7) {
       print("Você perdeu!");
       break;
     } else {
-      print("Você tirou $somaDados então não pode marcar um ponto.");
+      print(
+          "Você não pontuou desta vez, pois obteve um total de $somaDados e seu ponto atual é $ponto.");
     }
 
-    contador += contador;
+    contador += 1;
   }
 }
