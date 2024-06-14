@@ -7,7 +7,3 @@ O projeto consiste em um aplicativo que pergunta 3 números e responde qual é o
 <p align="center">
   <img src="https://github.com/pedrkw/code/blob/main/FLUTTER/achar_maior_numero/screenshot.png" alt="App capture">
 </p>
-
-## License
-
-The codes are released under the MIT License.
