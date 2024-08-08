@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summing values</title>
+  <style>
+    body {
+      background-color: #323232;
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      margin: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      background-color: #424242;
+      color: white;
+      text-align: center;
+    }
+
+    input[type="button"] {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 50px;
+      height: 41px;
+    }
+
+    span {
+      margin: 20px;
+      padding: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      background-color: #424242;
+      color: white;
+      text-align: center;
+      width: 71px;
+      height: 21px;
+      display: inline-block;
+    }
+
+    .signal {
+      display: inline;
+      font: normal 20pt Georgia;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Summing values</h1>
+  <div class="sum">
+    <input type="number" name="txtn1" id="sumN1">
+    <div class="signal">+</div>
+    <input type="number" name="txtn2" id="sumN2">
+    <input type="button" value="=" onclick="sumValues()">
+    <span id="sumResult">Result</span>
+  </div>
+  <div class="minus">
+    <input type="number" name="txtn1" id="minusN1">
+    <div class="signal">-</div>
+    <input type="number" name="txtn2" id="minusN2">
+    <input type="button" value="=" onclick="minusValues()">
+    <span id="minusResult">Result</span>
+  </div>
+  <div class="mul">
+    <input type="number" name="txtn1" id="mulN1">
+    <div class="signal">*</div>
+    <input type="number" name="txtn2" id="mulN2">
+    <input type="button" value="=" onclick="mulValues()">
+    <span id="mulResult">Result</span>
+  </div>
+  <div class="divi">
+    <input type="number" name="txtn1" id="diviN1">
+    <div class="signal">/</div>
+    <input type="number" name="txtn2" id="diviN2">
+    <input type="button" value="=" onclick="diviValues()">
+    <span id="diviResult">Result</span>
+  </div>
+
+  <script>
+    function sumValues() {
+      let tn1 = window.document.getElementById('sumN1');
+      let tn2 = window.document.querySelector('input#sumN2');
+      let sum = window.document.getElementById('sumResult');
+      let sumN1 = Number(tn1.value);
+      let sumN2 = Number(tn2.value);
+      let sumResult = sumN1 + sumN2;
+      sum.innerHTML = sumResult;
+    }
+
+    function mulValues() {
+      let tn1 = window.document.getElementById('mulN1');
+      let tn2 = window.document.querySelector('input#mulN2');
+      let mul = window.document.getElementById('mulResult');
+      let mulN1 = Number(tn1.value);
+      let mulN2 = Number(tn2.value);
+      let mulResult = mulN1 * mulN2;
+      mul.innerHTML = mulResult;
+    }
+
+    function diviValues() {
+      let tn1 = window.document.getElementById('diviN1');
+      let tn2 = window.document.querySelector('input#diviN2');
+      let divi = window.document.getElementById('diviResult');
+      let diviN1 = Number(tn1.value);
+      let diviN2 = Number(tn2.value);
+      let diviResult = diviN1 / diviN2;
+      divi.innerHTML = diviResult;
+    }
+
+    function minusValues() {
+      let tn1 = window.document.getElementById('minusN1');
+      let tn2 = window.document.querySelector('input#minusN2');
+      let minus = window.document.getElementById('minusResult');
+      let minusN1 = Number(tn1.value);
+      let minusN2 = Number(tn2.value);
+      let minusResult = minusN1 - minusN2;
+      minus.innerHTML = minusResult;
+    }
+  </script>
+</body>
+
+</html>

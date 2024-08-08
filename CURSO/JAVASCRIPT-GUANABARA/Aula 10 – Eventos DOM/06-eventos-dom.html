@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM Events</title>
+  <style>
+    body {
+      background-color: #323232;
+      /* color: azure; */
+    }
+
+    div#space {
+      background: aquamarine;
+      /* color:black; */
+      font: normal 20pt Georgia;
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- onclick="mouseClick()" onmouseenter="mouseEnter()" onmouseout="mouseLeave()" -->
+  <div id="space">
+    Look at me
+  </div>
+
+  <script>
+    let space = window.document.getElementById('space');
+    space.addEventListener('click', mouseClick);
+    space.addEventListener('mouseenter', mouseEnter);
+    space.addEventListener('mouseout', mouseLeave);
+
+    function mouseClick() {
+      space.innerText = 'Mouse clicked'
+      space.style.background = 'pink'
+    }
+
+    function mouseEnter() {
+      space.innerText = 'Mouse enter'
+      space.style.background = 'yellow'
+    }
+
+    function mouseLeave() {
+      space.innerText = 'Mouse leave'
+      space.style.background = 'aquamarine'
+    }
+
+  </script>
+</body>
+
+</html>

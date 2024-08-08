@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de multas</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #ffa500;
+    }
+
+    #txtVel {
+      display: inline;
+    }
+
+    input[type="number"] {
+      background-color: #333;
+      color: #fff;
+      border: 1px solid #555;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    input[type="button"] {
+      background-color: #ffa500;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      margin-left: 30px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="button"]:hover {
+      background-color: #ff8c00;
+    }
+
+    #txtVel {
+      display: inline;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Calculadora de Multas</h1>
+  <p id="txtVel">Velocidade do carro: <input type="number" name="inpVel" id="inpVel"> KM/h</p>
+  <input type="button" value="Calcular" onclick=" calcularMulta()">
+  <div id="outMulta">
+
+  </div>
+  <script>
+    function calcularMulta() {
+      let inpVel = document.getElementById('inpVel')
+      let outMulta = document.getElementById('outMulta')
+      let velAtual = Number(inpVel.value)
+      outMulta.innerHTML = `<p>Sua velocidade atual é de <b>${velAtual}KM/h</b></p>`
+      if (velAtual > 60) {
+        outMulta.innerHTML += `<p>Você foi <b>MULTADO</b> por execesso de velocidade!</p>`
+      }
+      outMulta.innerHTML += `<p>Dirija sempre usando sinto de segurança.</p>`
+    }
+  </script>
+</body>
+
+</html>
