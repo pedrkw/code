@@ -14,7 +14,7 @@ function valiInput() {
   const alturaValue = parseFloat(altura.value);
   let isNumber = true;
 
-  if (Number.isNaN(pesoValue) || Number.isNaN(alturaValue) == true) {
+  if (Number.isNaN(pesoValue) || Number.isNaN(alturaValue)) {
     updateOutput("Digite um valor válido.", true);
     isNumber = false;
   };
