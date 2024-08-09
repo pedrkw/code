@@ -31,24 +31,23 @@ function valiInput() {
 };
 
 function calcIMC(peso, altura) {
+  if (!valiInput()) return;
   const pesoValue = parseFloat(peso.value);
   const alturaValue = parseFloat(altura.value);
   const imc = pesoValue / (alturaValue * alturaValue);
 
-  if (valiInput() == true) {
-    if (imc < 18.5) {
-      updateOutput(`IMC: ${imc.toFixed(2)} - Abaixo do peso`, false);
-    } else if (imc >= 18.5 && imc <= 24.9) {
-      updateOutput(`IMC: ${imc.toFixed(2)} - Peso normal`, false);
-    } else if (imc >= 25 && imc <= 29.9) {
-      updateOutput(`IMC: ${imc.toFixed(2)} - Sobrepeso`, false);
-    } else if (imc >= 30 && imc <= 34.9) {
-      updateOutput(`IMC: ${imc.toFixed(2)} - Obesidade grau 1`, false);
-    } else if (imc >= 35 && imc <= 39.9) {
-      updateOutput(`IMC: ${imc.toFixed(2)} - Obesidade grau 2`, false);
-    } else {
-      updateOutput(`IMC: ${imc.toFixed(2)} - Obesidade grau 3`, false);
-    };
+  if (imc < 18.5) {
+    updateOutput(`IMC: ${imc.toFixed(2)} - Abaixo do peso`, false);
+  } else if (imc >= 18.5 && imc <= 24.9) {
+    updateOutput(`IMC: ${imc.toFixed(2)} - Peso normal`, false);
+  } else if (imc >= 25 && imc <= 29.9) {
+    updateOutput(`IMC: ${imc.toFixed(2)} - Sobrepeso`, false);
+  } else if (imc >= 30 && imc <= 34.9) {
+    updateOutput(`IMC: ${imc.toFixed(2)} - Obesidade grau 1`, false);
+  } else if (imc >= 35 && imc <= 39.9) {
+    updateOutput(`IMC: ${imc.toFixed(2)} - Obesidade grau 2`, false);
+  } else {
+    updateOutput(`IMC: ${imc.toFixed(2)} - Obesidade grau 3`, false);
   };
 };
 
