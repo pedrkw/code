@@ -5,8 +5,8 @@ const altura = document.getElementById("input-altura");
 function updateOutput(message, isError) {
   outputIMC.textContent = message;
   outputIMC.style.cssText = isError
-    ? 'color: black; background-color: #ffadad; font-size: 18px; margin-top: 22px; padding: 10px; border-radius: 5px;'
-    : 'color: black; background-color: #caffbf; font-size: 18px; margin-top: 22px; padding: 10px; border-radius: 5px;';
+    ? 'background-color: #ffadad'
+    : 'background-color: #caffbf';
 }
 
 function valiInput() {
