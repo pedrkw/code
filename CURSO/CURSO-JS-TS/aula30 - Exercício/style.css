@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --primary-color: #2b5278;
+  --secondary-color: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: 'Noto Serif', sans-serif;
+}
+
+h1 {
+  background-color: var(--secondary-color);
+  border-radius: 6px;
+  max-width: 640px;
+  margin: 32px auto;
+  margin-top: 300px;
+  padding: 32px;
+  color: black;
+}

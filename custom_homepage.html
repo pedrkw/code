@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Tab Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      width: 80%;
+      max-width: 800px;
+    }
+
+    .search-bar {
+      margin-bottom: 40px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+      border-radius: 25px;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .shortcuts {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .shortcut {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100px;
+      text-decoration: none;
+    }
+
+    .shortcut img {
+      width: 100px;
+      height: 100px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .shortcut p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    /* Hover effect for clickable shortcuts */
+    .shortcut:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" placeholder="Search or enter address">
+    </div>
+
+    <!-- Shortcuts Section -->
+    <div class="shortcuts">
+      <a href="https://example.com" class="shortcut">
+        <img src="https://via.placeholder.com/100" alt="Site 1">
+        <p>Example Site 1</p>
+      </a>
+      <a href="https://example2.com" class="shortcut">
+        <img src="https://via.placeholder.com/100" alt="Site 2">
+        <p>Example Site 2</p>
+      </a>
+      <a href="https://example3.com" class="shortcut">
+        <img src="https://via.placeholder.com/100" alt="Site 3">
+        <p>Example Site 3</p>
+      </a>
+      <a href="https://example4.com" class="shortcut">
+        <img src="https://via.placeholder.com/100" alt="Site 4">
+        <p>Example Site 4</p>
+      </a>
+      <a href="https://example5.com" class="shortcut">
+        <img src="https://via.placeholder.com/100" alt="Site 5">
+        <p>Example Site 5</p>
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>

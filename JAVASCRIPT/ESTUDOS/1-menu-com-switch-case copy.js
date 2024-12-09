@@ -1,4 +1,4 @@
-//Elabore um programa que mostre um menu que permita cadastro, exclusão, alteração e consulta de clientes
+//Elabore um programa que mostre um menu de cadastro, exclusão, alteração e consulta de clientes
 let clientes = [];
 
 while (true) {
@@ -8,7 +8,7 @@ while (true) {
     case 0:
       let incluir = prompt("Digite o nome do cliente: ");
       clientes.push(incluir);
-      console.log("Cliente cadastrado.");
+      console.log("Cliente cadastrado. \n");
       break;
     case 1:
       console.log("Lista de clientes cadastrados: ");
@@ -30,9 +30,9 @@ while (true) {
         console.log(`${[i]} - ${clientes[i]}`);
       }
 
-      escolhaAlterar = parseInt(prompt("Escolha o cliente que deseja excluir: "));
-      if (typeof escolhaAlterar !== 'number' || isNaN(escolhaAlterar) || escolhaAlterar < 0 || escolhaAlterar >= clientes.length) {
-        clientes.pop(escolhaAlterar);
+      escolhaExluir = parseInt(prompt("Escolha o cliente que deseja excluir: "));
+      if (typeof escolhaExluir == 'number' && isNaN(escolhaExluir) == 'false' ||) {
+        clientes.pop(escolhaExluir);
         console.log("Cliente excluído com sucesso.")
       } else {
         console.log("Escolha inválida.");
@@ -45,7 +45,7 @@ while (true) {
         console.log(`${[i]} - ${clientes[i]}`);
       }
       if (clientes.length == 0) {
-        console.log("Nenhum cliente cadastrado.")
+        console.log("Nenhum cliente cadastrado.\n")
       }
       break;
     default:

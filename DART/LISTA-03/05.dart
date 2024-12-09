@@ -18,6 +18,7 @@ void main() {
 
   while (true) {
     print("Rodada: $contador");
+    print("Lançando dados...");
     dadoUm = Random().nextInt(6) + 1;
     dadoDois = Random().nextInt(6) + 1;
     somaDados = dadoUm + dadoDois;
@@ -35,13 +36,7 @@ void main() {
       break;
     }
 
-    if (contador == 1 &&
-        (somaDados == 4 ||
-            somaDados == 5 ||
-            somaDados == 6 ||
-            somaDados == 8 ||
-            somaDados == 9 ||
-            somaDados == 10)) {
+    if (contador == 1) {
       ponto = somaDados;
       print("Parabéns, você marcou um ponto!");
     } else if (contador > 1 && (ponto == somaDados)) {

@@ -35,6 +35,7 @@ function calcIMC(peso, altura) {
   const pesoValue = parseFloat(peso.value);
   const alturaValue = parseFloat(altura.value);
   const imc = pesoValue / (alturaValue * alturaValue);
+  // const grauIMC = ['Abaixo do peso', 'Peso normal', 'Sobrepeso', 'Obesidade grau 1', 'Obesidade grau 2', 'Obesidade grau 3'];
 
   if (imc < 18.5) {
     updateOutput(`IMC: ${imc.toFixed(2)} - Abaixo do peso`, false);
