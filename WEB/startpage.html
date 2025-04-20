@@ -126,7 +126,6 @@
             ];
             const wordElement = document.getElementById("word-homepage");
 
-            // Easter egg commands mapped to URLs
             const easterEggs = {
                 rickroll: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
                 "nvidia fuck you":
@@ -135,7 +134,6 @@
                     "https://www.youtube.com/watch?v=OF_5EKNX0Eg",
             };
 
-            // Change the calm word periodically
             let wordIndex = 0;
             setInterval(() => {
                 wordIndex = (wordIndex + 1) % calmWords.length;
@@ -152,14 +150,12 @@
 
                 if (!query) return;
 
-                // Check for easter eggs
                 const lowerQuery = query.toLowerCase();
                 if (easterEggs[lowerQuery]) {
                     window.location.href = easterEggs[lowerQuery];
                     return;
                 }
 
-                // Check if it's a URL
                 if (isValidUrl(query)) {
                     if (!query.startsWith("http")) {
                         query = "https://" + query;
@@ -178,7 +174,6 @@
                 );
             }
 
-            // Focus on search input when page loads
             searchInput.focus();
         </script>
     </body>
