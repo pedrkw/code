@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Start Page</title>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="https://raw.githubusercontent.com/zen-browser/www/refs/heads/main/public/favicon.svg"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-color: #161616;
+                color: #f1f1f1;
+                font-family: "Noto Serif", monospace;
+                text-align: center;
+                transition:
+                    background-color 0.3s,
+                    color 0.3s;
+                position: relative;
+                padding: 20px;
+            }
+
+            form {
+                display: flex;
+                position: relative;
+                border: 2px solid #2e2e2e;
+                border-radius: 8px;
+                background: #222;
+                transition: border 0.3s;
+                width: 600px;
+                max-width: 750px;
+                margin: 5px auto 0;
+            }
+
+            input {
+                padding: 10px;
+                font-size: 18px;
+                color: #f1f1f1;
+                background: transparent;
+                border: none;
+                outline: none;
+                height: 48px;
+                width: 100%;
+                transition: color 0.3s;
+            }
+
+            form:hover {
+                border: 2px solid #a9c6fe;
+            }
+
+            ::placeholder {
+                color: #888;
+            }
+
+            button {
+                background: #222;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                padding: 10px 15px;
+                font-size: 18px;
+                transition: background 0.3s;
+            }
+
+            @media (max-width: 480px) {
+                input {
+                    font-size: 16px;
+                }
+
+                button {
+                    font-size: 16px;
+                    padding: 8px 12px;
+                }
+            }
+
+            #word-homepage {
+                color: #f47150;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p id="txt-homepage">
+            welcome to a <span id="word-homepage">calmer</span> internet
+        </p>
+        <form id="searchForm">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search or enter a URL..."
+                autofocus
+                aria-label="Search or enter a URL"
+            />
+            <button type="submit" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+
+        <script>
+            const searchInput = document.getElementById("searchInput");
+            const searchForm = document.getElementById("searchForm");
+            const calmWords = [
+                "calmer",
+                "quieter",
+                "gentler",
+                "peaceful",
+                "mindful",
+            ];
+            const wordElement = document.getElementById("word-homepage");
+
+            // Easter egg commands mapped to URLs
+            const easterEggs = {
+                rickroll: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                "nvidia fuck you":
+                    "https://www.youtube.com/watch?v=OF_5EKNX0Eg",
+                "fuck you nvidia":
+                    "https://www.youtube.com/watch?v=OF_5EKNX0Eg",
+            };
+
+            // Change the calm word periodically
+            let wordIndex = 0;
+            setInterval(() => {
+                wordIndex = (wordIndex + 1) % calmWords.length;
+                wordElement.textContent = calmWords[wordIndex];
+            }, 5000);
+
+            searchForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+                handleSearch();
+            });
+
+            function handleSearch() {
+                let query = searchInput.value.trim();
+
+                if (!query) return;
+
+                // Check for easter eggs
+                const lowerQuery = query.toLowerCase();
+                if (easterEggs[lowerQuery]) {
+                    window.location.href = easterEggs[lowerQuery];
+                    return;
+                }
+
+                // Check if it's a URL
+                if (isValidUrl(query)) {
+                    if (!query.startsWith("http")) {
+                        query = "https://" + query;
+                    }
+                    window.location.href = query;
+                } else {
+                    window.location.href =
+                        "https://www.duckduckgo.com/?q=" +
+                        encodeURIComponent(query);
+                }
+            }
+
+            function isValidUrl(string) {
+                return /^(https?:\/\/)?([a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}(\/\S*)?$/.test(
+                    string,
+                );
+            }
+
+            // Focus on search input when page loads
+            searchInput.focus();
+        </script>
+    </body>
+</html>
