@@ -52,6 +52,7 @@
 
             input {
                 padding: 10px;
+                padding-right: 45px;
                 font-size: 18px;
                 color: #f1f1f1;
                 background: transparent;
@@ -71,13 +72,21 @@
             }
 
             button {
-                background: #222;
-                color: white;
+                background: transparent;
+                color: #f1f1f1;
                 border: none;
-                border-radius: 8px;
-                padding: 10px 15px;
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 8px;
                 font-size: 18px;
-                transition: background 0.3s;
+                cursor: pointer;
+                transition: color 0.3s;
+            }
+
+            button:hover {
+                color: #a9c6fe;
             }
 
             @media (max-width: 480px) {
@@ -87,19 +96,54 @@
 
                 button {
                     font-size: 16px;
-                    padding: 8px 12px;
+                    padding: 8px;
                 }
             }
 
             #word-homepage {
                 color: #f47150;
+                display: inline-block;
+                transition:
+                    opacity 0.8s ease,
+                    transform 0.8s ease;
+            }
+
+            .fade-in {
+                animation: fadeIn 0.8s ease forwards;
+            }
+
+            .fade-out {
+                animation: fadeOut 0.8s ease forwards;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes fadeOut {
+                from {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
             }
         </style>
     </head>
 
     <body>
         <p id="txt-homepage">
-            welcome to a <span id="word-homepage">calmer</span> internet
+            welcome to a
+            <span id="word-homepage" class="fade-in">calmer</span> internet
         </p>
         <form id="searchForm">
             <input
@@ -135,10 +179,22 @@
             };
 
             let wordIndex = 0;
-            setInterval(() => {
-                wordIndex = (wordIndex + 1) % calmWords.length;
-                wordElement.textContent = calmWords[wordIndex];
-            }, 5000);
+
+            function changeWord() {
+                wordElement.classList.remove("fade-in");
+                wordElement.classList.add("fade-out");
+
+                setTimeout(() => {
+                    wordIndex = (wordIndex + 1) % calmWords.length;
+                    wordElement.textContent = calmWords[wordIndex];
+
+                    wordElement.classList.remove("fade-out");
+                    wordElement.classList.add("fade-in");
+                }, 800);
+            }
+
+            // Change word every 5 seconds
+            setInterval(changeWord, 5000);
 
             searchForm.addEventListener("submit", function (event) {
                 event.preventDefault();
